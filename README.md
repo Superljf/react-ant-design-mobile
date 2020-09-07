@@ -4,8 +4,6 @@
  - 这里建议你能使用npm 就使用npm, cnpm虽然快但是可能会有各种不知明的问题
  - npm start 
 
-
-
 <h1 align="center">Ant Design Pro</h1>
 
 <div align="center">
@@ -22,8 +20,6 @@ An out-of-box UI solution for enterprise applications as a React boilerplate.
 - ChangeLog: http://pro.ant.design/docs/changelog
 - FAQ: http://pro.ant.design/docs/faq
 - Mirror Site in China: http://ant-design-pro.gitee.io
-
-
 
 
 ## Templates
