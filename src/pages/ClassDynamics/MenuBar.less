@@ -1,0 +1,79 @@
+.dynamicTitle {
+  overflow: scroll;
+  overflow-y: hidden;
+  display: -webkit-box;
+  border-bottom: 1PX solid #e1e1e1;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dynamicTitleItem {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+
+.classListItem {
+
+  .gradeName {
+    margin-bottom: 10px;
+  }
+}
+
+.active {
+  color: #199ED8;
+  border-bottom: 2px solid #199ED8;
+}
+
+.classListLayout {
+  padding: 10px 10px 0 10px;
+  height: 216px;
+  overflow: auto;
+}
+
+.btnLayout {
+  display: flex;
+
+  .btnLayoutItem {
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .btnComfirm {
+    background-color: #199ED8;
+    color: white;
+  }
+}
+
+.selectedClass {
+  display: flex;
+
+  .classLeft {
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+  .classList {
+    flex: 1;
+
+    .classItem {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 6px;
+      padding: 2px 6px;
+      border: 1px solid #199ED8;
+      background-color: #199ED8;
+      color: white;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    .moreOperate {
+      // padding-left: 10px;
+      color: #199ED8;
+      display: inline-block;
+    }
+  }
+
+}
