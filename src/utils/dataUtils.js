@@ -1,5 +1,4 @@
 const LOCAL_STORAGE_NAMESPACE = 'growthEvaluation';
-import { ListView } from "antd-mobile";
 
 const dataUtils = {
   castOrdinal(bool) {
@@ -82,23 +81,6 @@ const dataUtils = {
     }
 
     return string.replace(/\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, "");
-  },
-
-  getListViewDataSource() {
-    return new ListView.DataSource({
-      getRowData: (dataBlob, sectionID, rowID) => {
-        return dataBlob[sectionID][rowID];
-      },
-      rowHasChanged: (row1, row2) => row1 !== row2,
-    });
-  },
-  getListViewSectionDataSource() {
-    return new ListView.DataSource({
-      getRowData: (dataBlob, sectionID, rowID) => { const rowData = dataBlob[`${sectionID}Data`][rowID]; return { ...rowData, dataType: sectionID }; },
-      getSectionHeaderData: (dataBlob, sectionID) => { return dataBlob[sectionID]; },
-      rowHasChanged: (row1, row2) => row1 !== row2,
-      sectionHeaderHasChanged: (s1, s2) => s1 !== s2,
-    });
   },
 };
 

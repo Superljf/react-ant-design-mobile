@@ -40,10 +40,6 @@ export const imgs = {
   share,
 };
 
-export const constants = {  
-  "gradeType":["","托班","小班","中班","大班","混合班","一年级","二年级","三年级","四年级","五年级","六年级","七年级","八年级","九年级","高一年级","高二年级","高三年级"],
-};
-
 const fsPath = `${nativeApi.getFsPath()}v1.0/`;
 
 const downloadPath = `${fsPath}downloadFile.file?fileUuid=`;

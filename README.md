@@ -1,8 +1,4 @@
-
- ### Use it
- - npm i / cnpm i 
- - 这里建议你能使用npm 就使用npm, cnpm虽然快但是可能会有各种不知明的问题
- - npm start 
+English | [简体中文](./README.zh-CN.md) | [Русский](./README.ru-RU.md) | [Türkçe](./README.tr-TR.md) | [日本語](./README.ja-JP.md) | [Français](./README.fr-FR.md)
 
 <h1 align="center">Ant Design Pro</h1>
 
@@ -21,6 +17,25 @@ An out-of-box UI solution for enterprise applications as a React boilerplate.
 - FAQ: http://pro.ant.design/docs/faq
 - Mirror Site in China: http://ant-design-pro.gitee.io
 
+## 2.0 Released Now! 🎉🎉🎉
+
+[Announcing Ant Design Pro 2.0.0](https://medium.com/ant-design/beautiful-and-powerful-ant-design-pro-2-0-release-51358da5af95)
+
+## Translation Recruitment :loudspeaker:
+
+We need your help: https://github.com/ant-design/ant-design-pro/issues/120
+
+## Features
+
+- :gem: **Neat Design**: Follow [Ant Design specification](http://ant.design/)
+- :triangular_ruler: **Common Templates**: Typical templates for enterprise applications
+- :rocket: **State of The Art Development**: Newest development stack of React/umi/dva/antd
+- :iphone: **Responsive**: Designed for variable screen sizes
+- :art: **Theming**: Customizable theme with simple config
+- :globe_with_meridians: **International**: Built-in i18n solution
+- :gear: **Best Practices**: Solid workflow to make your code healthy
+- :1234: **Mock development**: Easy to use mock development solution
+- :white_check_mark: **UI Test**: Fly safely with unit and e2e tests
 
 ## Templates
 
@@ -106,3 +121,10 @@ Modern browsers and IE11.
 | --- | --- | --- | --- | --- |
 | IE11, Edge | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
+## Contributing
+
+Any type of contribution is welcome, here are some examples of how you may contribute to this project:
+
+- Use Ant Design Pro in your daily work.
+- Submit [issues](http://github.com/ant-design/ant-design-pro/issues) to report bugs or ask questions.
+- Propose [pull requests](http://github.com/ant-design/ant-design-pro/pulls) to improve our code.

@@ -1,5 +1,5 @@
 export default [
-  // app插件
+ // app插件
   {
     path: '/',
     component: '../layouts/MobileLayout',
@@ -14,26 +14,6 @@ export default [
       {
         path: '/classdynamics/detail',
         component: './ClassNotice/Detail',
-      },
-      {
-        path: '/createDynamics',
-        component: './CreateDynamics',
-      },
-      {
-        path: '/dynamicsDetails',
-        component: './DynamicsDetails',
-      },
-      {
-        path: '/minePublic',
-        component: './MinePublic/minePublic',
-      },
-      {
-        path: '/unreadNews',
-        component: './UnreadNews/unreadNews',
-      },
-      {
-        path: '/test',
-        component: './Test/test',
       },
     ],
   },

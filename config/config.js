@@ -89,15 +89,10 @@ export default {
   proxy: {
     '/store/api/': {
       // 'target': 'http://localhost:8080/store/api',
-      // 'target': 'http://192.168.10.89/store/api',
-      'target': 'http://172.16.51.232:8080/store/api',
+      'target': 'http://192.168.10.89/store/api',
       // 'target': 'http://yuexunedu.com:9001/store/api',
       'changeOrigin': true,
       'pathRewrite': { "^/" : "" },
-    },
-    '/fs/api/': {
-      target: 'http://192.168.10.89/',
-      changeOrigin: true,
     },
   },
   ignoreMomentLocale: true,

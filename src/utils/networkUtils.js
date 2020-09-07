@@ -23,6 +23,7 @@ const networkUtils = {
   },
   getAction(action, version, product, format) {
     let url = nativeApi.native() ? nativeApi.getApiPath() : API_PATH;
+
     if (product) {
       url += `${product}/`;
     }

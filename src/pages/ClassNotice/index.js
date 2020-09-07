@@ -44,9 +44,10 @@ class ClassNotice extends React.PureComponent{
                 nativeApi.close()
               }
             }
-            style={{backgroundColor: '#1bc376'}}
+            // style={{backgroundColor: '#1bc376'}}
+            style={{ backgroundColor: '#5480db'}}
           >
-            班级通知
+            班级动态
           </NavBar>
         </div>
         <div style={{marginTop: `${marginTop}px`}}>

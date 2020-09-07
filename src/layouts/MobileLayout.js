@@ -13,28 +13,7 @@ NProgress.configure({ showSpinner: false });
 
 let currHref = '';
 
-@connect(({ dynamicsList }) => ({
-  dynamicsList,
-}))
 class MobileLayout extends PureComponent {
-  componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch({
-      type: 'dynamicsList/inquireCurrentAccountInfo'
-    })
-    this.getAuthority();
-  }
-
-  getAuthority = () => {
-    const { dispatch } = this.props;
-    dispatch({
-      type: 'dynamicsList/inquireOperationCodeListByProductAccount',
-      payload: {
-        productCode: 'YX_WISDOM-TEACHER_MOMENT_APP',
-      }
-    })
-  }
-
   getRouterAuthority = (pathname, routeData) => {
     let routeAuthority = ['noAuthority'];
     const getAuthority = (key, routes) => {

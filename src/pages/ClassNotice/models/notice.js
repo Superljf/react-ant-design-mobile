@@ -1,4 +1,4 @@
-import { stringify } from 'qs';
+import {stringify} from 'qs';
 import {
   inquireCnNoticeByParentList,
   inquireCnNoticePublished,
@@ -21,16 +21,16 @@ export default {
   },
 
   effects: {
-    *inquireCnNoticeByParentList({ payload }, { put, call }) {
+    *inquireCnNoticeByParentList({payload}, {put, call}){
       yield put({
-        type: 'saveState',
-        payload: { isLoading: true },
+        type:'saveState',
+        payload: { isLoading: true},
       });
 
       const response = yield call(inquireCnNoticeByParentList, payload);
 
       yield put({
-        type: 'saveState',
+        type:'saveState',
         payload: {
           isLoading: false,
           noticeList: response.datas || [],
@@ -40,33 +40,32 @@ export default {
       });
     },
 
-    *inquireCnNoticePublished({ payload }, { put, call }) {
+    *inquireCnNoticePublished({payload}, {put, call}){
       yield put({
         type: 'saveState',
-        payload: { noticeDetail: {} },
+        payload: {noticeDetail: {}},
       });
 
       const response = yield call(inquireCnNoticePublished, payload);
 
       yield put({
         type: 'saveState',
-        payload: { noticeDetail: response.datas[0] || {} },
+        payload: {noticeDetail: response.datas[0] || {}},
       });
     },
 
-    *updateCnNoticeReadByParentList({ payload }, { put, call }) {
+    *updateCnNoticeReadByParentList({payload}, {put, call}){
       const response = yield call(updateCnNoticeReadByParentList, payload);
       yield put({
-        type: 'saveState',
-        payload: { readSuccess: response.flag === 'SUCCESS' },
+        type:'saveState',
+        payload: { readSuccess: response.flag === 'SUCCESS'},
       });
     },
   },
 
   reducers: {
-    saveState(state, { payload }) {
-      console.log(payload);
-      return { ...state, ...payload };
-    },
+    saveState(state, { payload }){console.log(payload)
+      return {...state, ...payload}
+    }
   },
-};
+}

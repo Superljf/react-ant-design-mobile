@@ -65,15 +65,15 @@ const responseStatus = (response) => {
   response.clone().json().then((json) => {
     const { status, message } = json;
     if (status !== '200') {
-      // if(status === '404'){
-      //   if(message.indexOf('删除')){
-      //     Toast.fail('该条通知已被删除',2);
-      //     setTimeout(() => {
-      //       router.goBack();
-      //     }, 2000);
-      //     return;
-      //   }
-      // }
+      if(status === '404'){
+        if(message.indexOf('删除')){
+          Toast.fail('该条通知已被删除',2);
+          setTimeout(() => {
+            router.goBack();
+          }, 2000);
+          return;
+        }
+      }
       const errortext = codeMessage[status];
       notification.error({
         message: `请求错误,${message}`,
@@ -109,9 +109,9 @@ export default function request(url, option) {
   const sessionUuid = networkUtils.getSessionUuid();
   // const sessionUuid = localStorage.getItem('sid');
   const localOption = option ? { ...option } : {method: 'POST', body: `sessionUuid=${sessionUuid}`};
-  // if(option){
-  //   localOption.body = `${localOption.body}&sessionUuid=${sessionUuid}`;
-  // }
+  if(option){
+    localOption.body = `${localOption.body}&sessionUuid=${sessionUuid}`;
+  }
   const options = {
     expirys: isAntdPro(),
     ...localOption,
@@ -167,8 +167,8 @@ export default function request(url, option) {
       sessionStorage.removeItem(`${hashcode}:timestamp`);
     }
   }
-  // const actionUrl = networkUtils.getAction(url, option.version || requestPath.version, option.product, option.format);
-  return fetch(url, newOptions)
+  const actionUrl = networkUtils.getAction(url, option.version || requestPath.version, option.product, option.format);
+  return fetch(actionUrl, newOptions)
     .then(checkStatus)
     .then(responseStatus)
     .then(response => cachedSave(response, hashcode))
